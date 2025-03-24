@@ -1,0 +1,104 @@
+5. Area of a Trapezoid
+Solution: Area = ½ × (12 + 8) × 6 = 60 m²
+
+6. Area of a Sector of a Circle
+Formula: Area = (θ / 360) × π × radius²
+Solution: Area = (60 / 360) × 3.1416 × 9² = 42.41 cm²
+
+7. Area of a Rhombus
+Formula: Area = ½ × Diagonal₁ × Diagonal₂
+Solution: Area = ½ × 10 × 8 = 40 cm²
+
+8. Area of an Ellipse
+Formula: Area = π × (Major Axis/2) × (Minor Axis/2)
+Solution: Area = 3.1416 × (14/2) × (10/2) = 109.96 cm²
+
+WAP to check if the given number is positive or negative
+
+WAP to check if the given number is greater than 100 and less than 500
+
+WAP to check if the given triangle is Equilateral (input 3 sides from user)
+
+WAP to check if student pass or failed based on the average of 5 subjects marks 
+(If avg is >= 60, then student passed, otherwise failed.)
+WAP to check if the given character is a vowel or consonent (a, e, i, o, u)
+
+
+
+
+// WAP to print factors of given number.
+
+// WAP to check if given number is perfect (when sum of factors of a number=number itself)
+
+
+-----------------------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+
+public class MaxMinFinder {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number of inputs:");
+        int n = scanner.nextInt();
+        
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+
+        System.out.println("Enter " + n + " numbers:");
+        for (int i = 0; i < n; i++) {
+            int num = scanner.nextInt();
+            if (num > max) {
+                max = num;
+            }
+            if (num < min) {
+                min = num;
+            }
+        }
+
+        System.out.println("Maximum number: " + max);
+        System.out.println("Minimum number: " + min);
+    }
+}
+-----------------------------------------------------------------------------------------------------
+import java.util.Scanner;
+
+public class FactorsPrinter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number to find its factors:");
+        int number = scanner.nextInt();
+
+        System.out.println("Factors of " + number + " are:");
+        for (int i = 1; i <= number; i++) {
+            if (number % i == 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
+-----------------------------------------------------------------------------------------------------
+import java.util.Scanner;
+
+public class PerfectNumberChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number to check if it's a perfect number:");
+        int number = scanner.nextInt();
+
+        int sum = 0;
+        for (int i = 1; i <= number / 2; i++) {
+            if (number % i == 0) {
+                sum += i;
+            }
+        }
+
+        if (sum == number) {
+            System.out.println(number + " is a perfect number.");
+        } else {
+            System.out.println(number + " is not a perfect number.");
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------
+//wap to generate fibonaki sequence 
